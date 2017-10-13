@@ -1,0 +1,28 @@
+<span>Register</span>
+
+{{one-way-input
+  value=username
+  type="email"
+  placeholder="Email"
+  update=(action (mut username))
+}}
+
+{{one-way-input
+  value=confirmUsername
+  type="email"
+  placeholder="Confirm Email"
+  update=(action (mut confirmUsername))
+}}
+
+{{one-way-input
+  value=password
+  type="password"
+  placeholder="Password"
+  update=(action (mut password))
+}}
+
+{{#if isFormComplete}}
+    <div class="button" {{action "onRegister"}}>
+        Complete
+    </div>
+{{/if}}

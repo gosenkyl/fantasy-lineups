@@ -1,0 +1,23 @@
+<span>Login</span>
+
+{{one-way-input username
+  type="email"
+  placeholder="Email"
+  update=(action (mut username))
+}}
+
+{{one-way-input password
+  type="password"
+  placeholder="Password"
+  update=(action (mut password))
+}}
+
+{{#if errorMessage}}
+  <div>{{errorMessage}}</div>
+{{/if}}
+
+{{#if isFormComplete}}
+  <div class="button" {{action "onLogin"}}>
+      Continue
+  </div>
+{{/if}}
