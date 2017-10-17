@@ -1,15 +1,6 @@
 import Ember from 'ember';
+import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
 
-const {Route, inject, get} = Ember;
-
-export default Route.extend({
-
-  session: inject.service('session'),
-
-  redirect (model, transition){
-    if(get(this, "session.isAuthenticated")){
-      this.transitionTo("/subscriptions");
-    }
-  }
+export default Ember.Route.extend(UnauthenticatedRouteMixin, {
 
 });

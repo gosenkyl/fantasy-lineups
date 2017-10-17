@@ -1,3 +1,10 @@
+$darkblue: #1D2E40;
+$lightblue: #668E98;
+$green: #AEDAB7;
+$tan: #A2A878;
+$brown: #67512A;
+
+
 html, body {
   padding: 0;
   margin: 0;
@@ -12,10 +19,20 @@ a {
   color: inherit;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .button {
   padding: 10px;
   color: white;
-  background-color: cadetblue;
+  background-color: $lightblue;
+  align-self: center;
 }
 
 .button:hover {
@@ -87,9 +104,30 @@ a {
 }
 
 .menu-header {
-  background-color: midnightblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: $lightblue;
+  min-height: 45px;
+
+  padding: 0 10px;
+
+  .user {
+    padding-right: 10px;
+    align-self: center;
+    font-weight: bolder;
+
+    color: $darkblue;
+  }
+
+  .logout {
+    align-self: center;
+  }
 }
 
 .my-subscriptions {
-  background-color: midnightblue;
+
 }
+
+

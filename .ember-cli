@@ -7,5 +7,6 @@
   */
   "disableAnalytics": true,
   "usePods": true,
-  "proxy": "http://localhost:8081/"
+  "proxy": "http://localhost:8081/",
+  "port": 4300
 }

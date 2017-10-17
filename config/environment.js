@@ -29,7 +29,15 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'font-src': "'self' fonts.gstatic.com",
       'style-src': "'self' fonts.googleapis.com"
+    },
+
+    'ember-simple-auth': {
+      authorizer: 'simple-auth-authorizer:oauth2-bearer',
+      authenticationRoute: '/login',
+      routeAfterAuthentication: '/subscriptions',
+      routeIfAlreadyAuthenticated: '/subscriptions'
     }
+
   };
 
   if (environment === 'development') {
@@ -54,12 +62,6 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
-
-  ENV['ember-simple-auth'] = {
-    authenticationRoute: '/login',
-    routeAfterAuthentication: '/subscriptions',
-    routeIfAlreadyAuthenticated: '/subscriptions'
-  };
 
   return ENV;
 };

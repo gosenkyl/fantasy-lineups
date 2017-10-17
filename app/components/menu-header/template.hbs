@@ -1,1 +1,13 @@
-<div class="button" {{action "onLogout"}}>Logout</div>
+<div class="flex-grow">
+  <div>Fantasy Lineups</div>
+</div>
+<div class="flex-row">
+    <div class="user">
+        {{fa-icon "user"}}
+        <span>{{loggedInUser.username}}</span>
+    </div>
+    <div class="logout" {{action "onLogout"}}>
+        {{fa-icon "sign-out"}}
+        <span>logout</span>
+    </div>
+</div>
